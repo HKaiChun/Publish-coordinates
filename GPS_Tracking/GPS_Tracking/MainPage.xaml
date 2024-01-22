@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="GPS_Tracking.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Create a polygon" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <maps:Map x:Name="map" IsShowingUser="true">
+            <maps:Map.MapElements>
+                <maps:Polyline StrokeColor="Black"
+                            StrokeWidth="12">
+                    <maps:Polyline.Geopath>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>23.9494424136</x:Double>
+                                <x:Double>120.937806882</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                    </maps:Polyline.Geopath>
+                </maps:Polyline>
+            </maps:Map.MapElements>
+            <maps:Map.Pins>
+                <maps:Pin Label="Santa Cruz"
+                       Address="The city with a boardwalk"
+                       Type="Place">
+                    <maps:Pin.Position>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>23.9494424136</x:Double>
+                                <x:Double>120.937806882</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                    </maps:Pin.Position>
+                </maps:Pin>
+            </maps:Map.Pins>
+        </maps:Map>
+        
+        <!--<maps:Map x:Name="myMap"
+                  IsShowingUser="True">
+            <x:Arguments>
+                <maps:MapSpan>
+                    <x:Arguments>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>23.9495</x:Double>
+                                <x:Double>120.9377</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                        <x:Double>0.01</x:Double>
+                        <x:Double>0.01</x:Double>
+                    </x:Arguments>
+                </maps:MapSpan>
+            </x:Arguments>
+            <maps:Map.Pins>
+                <maps:Pin Label="Santa Cruz"
+                       Address="The city with a boardwalk"
+                       Type="Place">
+                    <maps:Pin.Position>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>23.9495</x:Double>
+                                <x:Double>120.9377</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                    </maps:Pin.Position>
+                </maps:Pin>
+            </maps:Map.Pins>
+        </maps:Map>-->
+    </StackLayout>
+
+</ContentPage>
