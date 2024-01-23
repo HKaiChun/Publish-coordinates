@@ -13,3 +13,4 @@ C:\Users\user\source\repos\GPS_Tracking\GPS_Tracking\GPS_Tracking\obj\Debug\nets
 C:\Users\user\source\repos\GPS_Tracking\GPS_Tracking\GPS_Tracking\obj\Debug\netstandard2.0\GPS_Tracking.pdb
 C:\Users\user\source\repos\GPS_Tracking\GPS_Tracking\GPS_Tracking\obj\Debug\netstandard2.0\GPS_Tracking.csproj.AssemblyReference.cache
 C:\Users\user\source\repos\GPS_Tracking\GPS_Tracking\GPS_Tracking\obj\Debug\netstandard2.0\refint\GPS_Tracking.dll
+C:\Users\user\source\repos\GPS_Tracking\GPS_Tracking\GPS_Tracking\obj\Debug\netstandard2.0\GPS_Tracking.sourcelink.json

@@ -10,7 +10,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using M2Mqtt;
-using M2Mqtt.Messages;// 2024/1/22
+using M2Mqtt.Messages;
 
 namespace GPS_Tracking
 {
@@ -19,9 +19,10 @@ namespace GPS_Tracking
         public static Timer timer;
         public double? Lat; // 緯度
         public double? Long; // 經度
+        public double? Lat2, Lat3, Long2, Long3;
         MqttClient MqClient;
-        string topic1 = "hkc/tag1";
-        string topic2 = "hkc/tag2";
+        //string topic1 = "hkc/tag1";
+        //string topic2 = "hkc/tag2";
 
         public MainPage()
         {
@@ -37,9 +38,9 @@ namespace GPS_Tracking
 
             if (MqClient.IsConnected)
             {
-                string[] topic = new string[2];
-                topic[0] = topic1;
-                topic[1] = topic2;
+                //string[] topic = new string[2];
+                //topic[0] = topic1;
+                //topic[1] = topic2;
                 byte[] msgs = new byte[2];
                 msgs[0] = MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE;
                 msgs[1] = MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE;
@@ -59,20 +60,6 @@ namespace GPS_Tracking
             //    new Position(23.950756771717764, 120.93872134680821),
             //    new Position(23.95187411546185, 120.93883106915482),
             //    new Position(23.953120372075265, 120.9387683708233),
-            //    new Position(23.95563318529957, 120.94079201320704),
-            //    new Position(23.956040971099437, 120.94170222728988),
-            //    new Position(23.95880584554341, 120.94455609736778),
-            //    new Position(23.963374621758767, 120.94622979603507),
-            //    new Position(23.965060910209885, 120.94650874574192),
-            //    new Position(23.966178554353007, 120.9462083383653),
-            //    new Position(23.967511871563893, 120.94658384765336),
-            //    new Position(23.968366156797703, 120.94657959548864),
-            //    new Position(23.969610992273413, 120.94736671016176),
-            //    new Position(23.971146272799917, 120.94786622524278),
-            //    new Position(23.967259626251114, 120.96339660467335),
-            //    new Position(23.967321669222756, 120.9636018773939),
-            //    new Position(23.96738517821558, 120.96375314562759),
-            //    new Position(23.967246952720547, 120.96403932877244),
             //    new Position(23.967508460288784, 120.96482019992479),
             //    new Position(23.96530057257442, 120.9671382836233),
             //    new Position(23.965311780212232, 120.96746943850552),
